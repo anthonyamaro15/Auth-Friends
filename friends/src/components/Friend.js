@@ -1,11 +1,25 @@
 import React from "react";
 
-const Friend = ({ obj }) => {
+const Friend = ({ obj, removeFriend }) => {
   return (
     <div className="Friends">
-      <h3>{obj.name}</h3>
-      <p>{obj.age}</p>
-      <p>{obj.email}</p>
+      <h3>
+        {" "}
+        name:
+        <span>{obj.name}</span>
+      </h3>
+      <p>
+        {" "}
+        age:
+        <span>{obj.age}</span>
+      </p>
+      <p>
+        email:
+        <span>{obj.email}</span>
+      </p>
+      <div className="remove-btn">
+        <button onClick={() => removeFriend(obj)}>remove</button>
+      </div>
     </div>
   );
 };

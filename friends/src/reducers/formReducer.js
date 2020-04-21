@@ -39,6 +39,24 @@ export const formReducer = (state = initialValue, action) => {
         loading: false,
         error: action.payload,
       };
+    //  removing friend
+    case "REMOVING_FRIEND":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "REMOVED_FRIEND":
+      return {
+        ...state,
+        loading: false,
+        data: action.payload,
+      };
+    case "ERROR_REMOVED":
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     default:
       return state;
   }
