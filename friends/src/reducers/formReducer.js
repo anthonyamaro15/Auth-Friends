@@ -21,6 +21,24 @@ export const formReducer = (state = initialValue, action) => {
       return {
         ...state,
       };
+    // ADDING NEW FRIENDS
+    case "FETCHING_NEW_FRIEND":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "ADDING_NEW_FRIEND":
+      return {
+        ...state,
+        loading: false,
+        data: action.payload,
+      };
+    case "NEW_ERROR":
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     default:
       return state;
   }

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import Friend from "./Friend";
+import AddFriend from "./AddFriends";
 
 // import { formReducer } from "../reducers/formReducer";
 
@@ -26,6 +27,7 @@ const FriendList = () => {
   }, []);
   return (
     <div className="FriendList">
+      <AddFriend />
       <h1>See Your Friends</h1>
       <div className="list">
         {data.map((fnd) => (

@@ -9,6 +9,12 @@ a {
   display: inline-block;
 }
 
+input,
+button {
+  display: inline-block;
+  outline: none;
+}
+
 .Navbar {
   //   border: 1px solid red;
   display: flex;
@@ -34,7 +40,7 @@ a {
 .FriendList {
   //   border: 1px solid red;
   width: 1200px;
-  margin: 5rem auto 0;
+  margin: 3rem auto 0;
 
   h1 {
     text-align: center;
@@ -61,6 +67,35 @@ a {
       p {
         font-size: 1.1rem;
         padding: 0.2rem 0;
+      }
+    }
+  }
+
+  .AddFriends {
+    //  border: 1px solid red;
+    width: 400px;
+    margin: 0 auto 5rem;
+
+    form {
+      input {
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid rgb(204, 200, 200);
+      }
+
+      button {
+        display: block;
+        font-size: 1rem;
+        margin: 1rem 0;
+        padding: 0.3rem 1.4rem;
+        color: white;
+        background: rgb(22, 69, 122);
+        border-radius: 4px;
+        cursor: pointer;
       }
     }
   }
