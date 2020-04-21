@@ -16,7 +16,7 @@ const MainApp = () => {
   const { data } = reducer.formReducer;
   //   console.log("got data", data);
   return (
-    <div className="MainForm">
+    <div className="MainApp">
       <Navbar />
       <Route exact path="/login" component={MainForm} />
       <PrivateRoute exact path="/friends" component={FriendList} />

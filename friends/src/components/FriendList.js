@@ -26,10 +26,12 @@ const FriendList = () => {
   }, []);
   return (
     <div className="FriendList">
-      <h1>FriendList</h1>
-      {data.map((fnd) => (
-        <Friend key={fnd.id} obj={fnd} />
-      ))}
+      <h1>See Your Friends</h1>
+      <div className="list">
+        {data.map((fnd) => (
+          <Friend key={fnd.id} obj={fnd} />
+        ))}
+      </div>
     </div>
   );
 };
