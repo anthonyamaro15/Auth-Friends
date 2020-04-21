@@ -14,6 +14,8 @@ const MainForm = () => {
             .post("/api/login", values)
             .then((res) => {
               console.log("response here ", res);
+              localStorage.setItem("token", JSON.stringify(res.data.payload));
+              history.push("/friends");
             })
             .catch((err) => {
               console.log(err);
