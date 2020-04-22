@@ -6,7 +6,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 const MainForm = () => {
   const history = useHistory();
   return (
-    <div>
+    <div className="MainForm">
       <Formik
         initialValues={{ username: "", password: "" }}
         onSubmit={(values, { resetForm }) => {

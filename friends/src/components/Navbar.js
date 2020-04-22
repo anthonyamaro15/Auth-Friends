@@ -1,14 +1,21 @@
 import React from "react";
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
-  const { url, path } = useRouteMatch();
-  console.log("paht here ", path);
+const Navbar = ({ logOut }) => {
+  const token = JSON.parse(localStorage.getItem("token"));
+
   return (
     <div className="Navbar">
       <nav>
-        <NavLink to="/login">Login</NavLink>
-        <NavLink to="/friends">FriendList</NavLink>
+        {!token && <NavLink to="/login">Login</NavLink>}
+        {token && (
+          <div>
+            <NavLink to="/friends">FriendList</NavLink>
+            <NavLink to="/login" onClick={logOut}>
+              Log out
+            </NavLink>
+          </div>
+        )}
       </nav>
     </div>
   );
